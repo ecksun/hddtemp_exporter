@@ -1,4 +1,4 @@
-Package: hdd-exporter
+Package: hddtemp-exporter
 Architecture: amd64
 Maintainer: linus <linus@wallgren.eu>
 Depends: parallel, bash, gawk, coreutils, hddtemp
