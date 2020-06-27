@@ -20,8 +20,13 @@ case "$1" in
             addgroup --quiet --system hddtemp-exporter
         fi
 
+        if ! getent group node-exp >/dev/null; then
+            addgroup --quiet --system node-exp
+        fi
+
         if ! getent passwd hddtemp-exporter >/dev/null; then
             adduser --quiet --system --ingroup hddtemp-exporter --shell /usr/sbin/nologin hddtemp-exporter
+            adduser hddtemp-exporter node-exp
         fi
 
         systemctl daemon-reload

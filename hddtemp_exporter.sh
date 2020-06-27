@@ -2,7 +2,7 @@
 
 set -ueo pipefail
 
-HDDTEMP_EXPORTER_OUTPUT=${HDDTEMP_EXPORTER_OUTPUT:-/var/lib/hddtemp-exporter/hddtemp_exporter.metrics}
+HDDTEMP_EXPORTER_OUTPUT=${HDDTEMP_EXPORTER_OUTPUT:-/var/lib/node_exporter/hddtemp.prom}
 
 mkdir -p "$(dirname ${HDDTEMP_EXPORTER_OUTPUT})"
 
