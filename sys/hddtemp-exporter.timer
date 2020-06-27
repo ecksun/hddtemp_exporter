@@ -1,0 +1,8 @@
+[Unit]
+Description=Update hddtemp metrics
+
+[Timer]
+OnCalendar=minutely
+
+[Install]
+WantedBy=timers.target

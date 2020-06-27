@@ -1,0 +1,5 @@
+Cmnd_Alias HDDTEMP_NOLOG=/usr/sbin/hddtemp
+
+Defaults!HDDTEMP_NOLOG !syslog, !pam_session
+
+hddtemp-exporter ALL=(root)  NOPASSWD: HDDTEMP_NOLOG 

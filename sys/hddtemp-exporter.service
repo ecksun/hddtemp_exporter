@@ -1,0 +1,19 @@
+[Unit]
+Description=Export hddtemp temperatures as a prometheus metric
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/default/hddtemp-exporter
+User=hddtemp-exporter
+Group=hddtemp-exporter
+ExecStart=/usr/lib/hddtemp-exporter/hddtemp_exporter.sh
+StateDirectory=hddtemp-exporter
+
+# Restrictions
+LimitNOFILE=1000
+PrivateTmp=true
+ProtectHome=true
+RemoveIPC=true
+RestrictSUIDSGID=true
+ProtectControlGroups=true
+ProtectSystem=true

@@ -1,0 +1,7 @@
+Package: hdd-exporter
+Architecture: amd64
+Maintainer: linus <linus@wallgren.eu>
+Depends: parallel, bash, gawk, coreutils, hddtemp
+Description: Very small wrapper around hddtemp to expose the values as
+ prometheus metrics. This can then be used by the node_exporter textfile
+ collector to expose to prometheus itself
